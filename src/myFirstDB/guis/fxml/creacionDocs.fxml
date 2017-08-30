@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Document creation..." />
+      <Text layoutX="14.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Document name" />
+      <TextField fx:id="txt_docName" layoutX="14.0" layoutY="64.0" />
+      <ListView fx:id="lv_createdAtr" layoutX="14.0" layoutY="106.0" prefHeight="280.0" prefWidth="149.0" />
+      <Text layoutX="14.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Created atributes" />
+      <Text layoutX="224.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data Type" />
+      <Text layoutX="300.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PK or FK" />
+      <Text layoutX="368.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Required" />
+      <ChoiceBox fx:id="cb_dataType" layoutX="224.0" layoutY="164.0" prefHeight="25.0" prefWidth="53.0" />
+      <ChoiceBox fx:id="cb_pfk" layoutX="300.0" layoutY="164.0" prefHeight="25.0" prefWidth="44.0" />
+      <ChoiceBox fx:id="cb_required" layoutX="368.0" layoutY="164.0" prefHeight="25.0" prefWidth="48.0" />
+      <TextField fx:id="txt_atributeName" layoutX="226.0" layoutY="106.0" prefHeight="25.0" prefWidth="190.0" promptText="Atribute name" />
+      <Button fx:id="btn_addobj" layoutX="329.0" layoutY="200.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="88.0" text="Add atribute" />
+      <Button layoutX="478.0" layoutY="18.0" mnemonicParsing="false" text="Create document!" />
+      <Button layoutX="398.0" layoutY="19.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Forget it" />
+   </children>
+</AnchorPane>
