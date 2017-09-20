@@ -5,38 +5,38 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="467.0" prefWidth="767.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.pagPrincipalController">
    <children>
       <SplitPane dividerPositions="0.2601307189542484" layoutX="-7.0" prefHeight="204.0" prefWidth="279.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TreeView fx:id="tv_jsFiles" editable="true" layoutY="14.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="80.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <Button fx:id="btn_createJsFile" layoutX="27.0" layoutY="426.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="147.0" text="Create New JS File" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="426.0" />
-                  <TextField fx:id="txt_nameJsFile" layoutX="24.0" layoutY="392.0" promptText="Name a new JS File" />
+                  <Button fx:id="btn_createJsFile" layoutX="27.0" layoutY="426.0" mnemonicParsing="false" onAction="#goCreacionDocs" prefHeight="25.0" prefWidth="147.0" text="Create New JS Store" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="426.0" />
+                  <Text layoutX="13.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JSon Stores..." />
+                  <TreeView fx:id="tv_JSonStore" layoutX="-18.0" layoutY="33.0" prefHeight="375.0" prefWidth="196.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="458.0">
                <children>
-                  <TreeView fx:id="tv_atributInDoc" layoutX="10.0" layoutY="63.0" prefHeight="379.0" prefWidth="159.0" />
-                  <Text layoutX="10.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atributes in selected doc..." />
-                  <Text layoutX="207.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selected atribute information..." />
-                  <Text layoutX="207.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data type" />
-                  <Text layoutX="277.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PK or FK" />
-                  <Text layoutX="337.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="required" />
-                  <Text layoutX="207.0" layoutY="136.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create object in atribute..." />
-                  <TextField fx:id="txt_createObj" layoutX="207.0" layoutY="146.0" prefHeight="25.0" prefWidth="260.0" />
-                  <Button fx:id="btn_checkCreate" layoutX="353.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Check and Create!" />
-                  <TableView fx:id="tbv_objects" fixedCellSize="1.0" layoutX="177.0" layoutY="233.0" prefHeight="200.0" prefWidth="377.0" AnchorPane.topAnchor="233.0">
-                    <columns>
-                      <TableColumn prefWidth="75.0" text="C1" />
-                      <TableColumn prefWidth="75.0" text="C2" />
-                    </columns>
-                  </TableView>
+                  <Text layoutX="5.0" layoutY="51.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Atributes in selected document" />
+                  <Text layoutX="190.0" layoutY="52.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add info to Document" />
+                  <Text layoutX="299.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data type" />
+                  <Text layoutX="362.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PK or FK" />
+                  <Text layoutX="414.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="required" />
+                  <Text layoutX="191.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add info to atribute..." />
+                  <TextField fx:id="txt_addToAtribute" layoutX="190.0" layoutY="146.0" prefHeight="25.0" prefWidth="277.0" />
+                  <Button fx:id="btn_checkGo" layoutX="221.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Check and Go on!" />
                   <Button fx:id="txt_saveAll" layoutX="436.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Save all changes!" />
-                  <TextField fx:id="txt_datType" layoutX="207.0" layoutY="80.0" prefHeight="25.0" prefWidth="51.0" />
-                  <TextField fx:id="txt_pfk" layoutX="279.0" layoutY="80.0" prefHeight="25.0" prefWidth="44.0" />
-                  <TextField fx:id="txt_required" layoutX="336.0" layoutY="80.0" prefHeight="25.0" prefWidth="45.0" />
+                  <TextField fx:id="txt_datType" disable="true" layoutX="300.0" layoutY="80.0" prefHeight="25.0" prefWidth="51.0" />
+                  <TextField fx:id="txt_pfk" disable="true" layoutX="362.0" layoutY="80.0" prefHeight="25.0" prefWidth="44.0" />
+                  <TextField fx:id="txt_required" disable="true" layoutX="414.0" layoutY="80.0" prefHeight="25.0" prefWidth="45.0" />
+                  <ListView fx:id="list_docs" layoutX="3.0" layoutY="59.0" prefHeight="375.0" prefWidth="169.0" />
+                  <ListView fx:id="list_objects" layoutX="188.0" layoutY="233.0" prefHeight="200.0" prefWidth="360.0" />
+                  <Text layoutX="183.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info on document" />
+                  <Button fx:id="btn_Create" layoutX="407.0" layoutY="181.0" mnemonicParsing="false" text="Create!!" />
+                  <TextField fx:id="txt_AtributeToAdd" disable="true" layoutX="191.0" layoutY="80.0" prefHeight="25.0" prefWidth="97.0" />
+                  <Text layoutX="196.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Atribute" />
+                  <Button fx:id="txt_escape" layoutX="342.0" layoutY="181.0" mnemonicParsing="false" text="Escape!" />
                </children></AnchorPane>
         </items>
       </SplitPane>
