@@ -1,7 +1,9 @@
 package application;
 
 
-
+/**
+ * el main de la aplicacion, aqui inicia todo  
+ */
 import java.io.IOException;
 
 import javafx.application.Application;
