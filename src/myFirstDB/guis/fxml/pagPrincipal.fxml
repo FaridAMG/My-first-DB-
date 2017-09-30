@@ -11,9 +11,10 @@
         <items>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <Button fx:id="btn_createJsFile" layoutX="27.0" layoutY="426.0" mnemonicParsing="false" onAction="#goCreacionDocs" prefHeight="25.0" prefWidth="147.0" text="Create New JS Store" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="426.0" />
+                  <Button fx:id="btn_createJsFile" layoutX="27.0" layoutY="407.0" mnemonicParsing="false" onAction="#goCreacionDocs" prefHeight="25.0" prefWidth="147.0" text="Create New JS Store" AnchorPane.bottomAnchor="33.0" AnchorPane.leftAnchor="27.0" AnchorPane.rightAnchor="27.0" AnchorPane.topAnchor="407.0" />
                   <Text layoutX="13.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="JSon Stores..." />
-                  <TreeView fx:id="tv_JSonStore" layoutX="-18.0" layoutY="33.0" prefHeight="375.0" prefWidth="196.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <TreeView fx:id="tv_JSonStore" layoutX="-18.0" layoutY="33.0" prefHeight="363.0" prefWidth="196.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                  <Button fx:id="btn_delStore" layoutX="27.0" layoutY="432.0" mnemonicParsing="false" onAction="#deleteSelStore" prefHeight="25.0" prefWidth="142.0" text="Delete selected store!" />
                </children>
             </AnchorPane>
           <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="465.0" prefWidth="458.0">
@@ -25,18 +26,18 @@
                   <Text layoutX="414.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="required" />
                   <Text layoutX="191.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add info to atribute..." />
                   <TextField fx:id="txt_addToAtribute" layoutX="190.0" layoutY="146.0" prefHeight="25.0" prefWidth="277.0" />
-                  <Button fx:id="btn_checkGo" layoutX="221.0" layoutY="181.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Check and Go on!" />
-                  <Button fx:id="txt_saveAll" layoutX="436.0" layoutY="8.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="114.0" text="Save all changes!" />
+                  <Button fx:id="btn_checkGo" layoutX="288.0" layoutY="181.0" mnemonicParsing="false" onAction="#checkGoOn" prefHeight="25.0" prefWidth="114.0" text="Check and Go on!" />
+                  <Button fx:id="txt_saveAll" layoutX="436.0" layoutY="8.0" mnemonicParsing="false" onAction="#saveAll" prefHeight="25.0" prefWidth="114.0" text="Save all changes!" />
                   <TextField fx:id="txt_datType" disable="true" layoutX="300.0" layoutY="80.0" prefHeight="25.0" prefWidth="51.0" />
                   <TextField fx:id="txt_pfk" disable="true" layoutX="362.0" layoutY="80.0" prefHeight="25.0" prefWidth="44.0" />
                   <TextField fx:id="txt_required" disable="true" layoutX="414.0" layoutY="80.0" prefHeight="25.0" prefWidth="45.0" />
-                  <ListView fx:id="list_docs" layoutX="3.0" layoutY="59.0" prefHeight="375.0" prefWidth="169.0" />
+                  <ListView fx:id="list_docs" layoutX="3.0" layoutY="59.0" prefHeight="339.0" prefWidth="169.0" />
                   <ListView fx:id="list_objects" layoutX="188.0" layoutY="233.0" prefHeight="200.0" prefWidth="360.0" />
                   <Text layoutX="183.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Info on document" />
-                  <Button fx:id="btn_Create" layoutX="407.0" layoutY="181.0" mnemonicParsing="false" text="Create!!" />
                   <TextField fx:id="txt_AtributeToAdd" disable="true" layoutX="191.0" layoutY="80.0" prefHeight="25.0" prefWidth="97.0" />
                   <Text layoutX="196.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The Atribute" />
-                  <Button fx:id="txt_escape" layoutX="342.0" layoutY="181.0" mnemonicParsing="false" text="Escape!" />
+                  <Button fx:id="txt_escape" layoutX="408.0" layoutY="181.0" mnemonicParsing="false" onAction="#escapefrominf" text="Escape!" />
+                  <Button fx:id="btn_selectItem" layoutX="1.0" layoutY="408.0" mnemonicParsing="false" onAction="#selectItem" prefHeight="25.0" prefWidth="169.0" text="Select Item" />
                </children></AnchorPane>
         </items>
       </SplitPane>
